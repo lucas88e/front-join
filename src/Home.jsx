@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import InputCreate from "./InputCreate";
 import axios from "axios";
 import { useState } from "react";
+import './index.css'
+
 
 const Home = ({data}) => {
-   const [task, setTask] = useState(data);
   const urlApi = "http://localhost:3000/id"
   const peticionDelete = (taskId) =>{
   
@@ -24,10 +25,10 @@ const Home = ({data}) => {
   return (
     <>
     <h1>Lista de datos</h1>
-    <ul>
+    <ul className="App">
     {data.map((item)=>(<li key={item._id}>
       <Link to={`/${item._id}`}> {item.title}</Link>
-      <button onClick={()=>peticionDelete(item._id)}>remove</button>
+      <button className="btn" onClick={()=>peticionDelete(item._id)}>remove</button>
      
     </li>))}
     </ul>

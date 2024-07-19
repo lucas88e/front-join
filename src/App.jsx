@@ -4,6 +4,11 @@ import React  from "react";
 import Home from "./Home";
 import ItemDetailPage from "./ItemDetailPage";
 import InputCreate from "./InputCreate";
+import './index.css'
+import './App.css'
+
+
+
 const App = () => {
 const [data,setData] = useState(null)
 const urlApi = "http://localhost:3000/"
@@ -23,7 +28,7 @@ useEffect(()=>{
   return (
   <>
   <Router>
-   <div>
+   <div >
     <nav>
       <Link to="/">Inicio</Link>
     </nav>
